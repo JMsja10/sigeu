@@ -12,7 +12,7 @@ import javax.crypto.NoSuchPaddingException;
 import com.adamiworks.utils.crypto.CryptoMode;
 import com.adamiworks.utils.crypto.CryptoUtils;
 
-public class App {
+public class App 
 	private static final byte[] MAIL_KEY_PASSWORD = { -112, 78, -12, 45, -13, 51, -84, 8 };
 
 	public static void main(String[] args) {
@@ -24,20 +24,10 @@ public class App {
 
 			System.out.println(encriptedPassword);
 
-		} catch (InvalidKeyException e) {
+		} catch (InvalidKeyException, NoSuchAlgorithmException,
+            NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, UnsupportedEncodingException,
+            InvalidAlgorithmParameterException e) {
 			e.printStackTrace();
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		} catch (NoSuchPaddingException e) {
-			e.printStackTrace();
-		} catch (IllegalBlockSizeException e) {
-			e.printStackTrace();
-		} catch (BadPaddingException e) {
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		} catch (InvalidAlgorithmParameterException e) {
-			e.printStackTrace();
-		}
+	}
 	}
 }
